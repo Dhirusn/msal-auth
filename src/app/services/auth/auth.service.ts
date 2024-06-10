@@ -24,7 +24,7 @@ export class AuthService {
   async logout() {
     try {
       await this.msalService.logoutPopup().toPromise();
-      this.router.navigate(['/']);
+      this.router.navigate(['/login']);
     } catch (error) {
       console.error(error);
     }
